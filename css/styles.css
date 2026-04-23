@@ -198,6 +198,37 @@ header nav > a span:nth-child(2) {
   margin-bottom: 1rem;
 }
 
+.skills-container {
+  display: grid;
+  /* align-content: center; */
+  /* justify-content: center; */
+  justify-items: center;
+  margin: 2rem auto;
+  width: 80%;
+  /* height: 3rem; */
+  padding: 2rem;
+  gap: 1rem;
+  color: white;
+}
+
+.skills-container h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.skills-container p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.skills-container span {
+  display: inline-block;
+  font-size: 3rem;
+  border: 2px solid;
+  padding: 0.5rem;
+  margin: 1rem auto;
+}
+
 @media (min-width: 768px) {
   /* HEADER */
   .mobile {
@@ -249,7 +280,6 @@ header nav > a span:nth-child(2) {
   .about div:nth-child(1) {
     width: 20rem;
     height: 20rem;
-
   }
 
   .about div:nth-child(2) {
@@ -259,5 +289,32 @@ header nav > a span:nth-child(2) {
   .about h2,
   .about h3 {
     color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* SKILLS */
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .skills-container div {
+    transition: scale 0.9s ease-in-out;
+  }
+
+  .skills-container div:not(:first-child):hover {
+    scale: 1.5;
+    border: 1px solid white;
+  }
+
+  .skills-container div:nth-child(1) {
+    grid-column: 1 / 5;
+    align-content: center;
+  }
+
+  .skills-container div:not(:first-child) {
+    background-color: black;
+    padding: 2rem;
   }
 }
