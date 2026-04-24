@@ -17,9 +17,9 @@ a {
   text-decoration: none;
 }
 
-body {
+/* body {
   background-color: rgba(0, 0, 0, 0.7);
-}
+} */
 
 header {
   width: 100%;
@@ -94,7 +94,7 @@ header nav > a span:nth-child(2) {
   color: rgba(0, 0, 0, 0.4);
 }
 
-/* HERO */
+/* HERO SECTION*/
 .hero {
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ header nav > a span:nth-child(2) {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ABOUT */
+/* ABOUT SECTION*/
 
 .about {
   display: grid;
@@ -176,11 +176,10 @@ header nav > a span:nth-child(2) {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 1rem;
   border-radius: 20px;
-  padding: 0.5rem;
 }
 
 .about h2,
@@ -198,17 +197,23 @@ header nav > a span:nth-child(2) {
   margin-bottom: 1rem;
 }
 
+/* SKILL SECTION */
+
+.skills {
+  /* background-image: url(../images/Gemini_Generated_2.png);
+  background-size: cover;
+  background-position: center; */
+  width: 100%;
+}
+
 .skills-container {
   display: grid;
-  /* align-content: center; */
-  /* justify-content: center; */
   justify-items: center;
   margin: 2rem auto;
   width: 80%;
-  /* height: 3rem; */
   padding: 2rem;
   gap: 1rem;
-  color: white;
+  color:rgba(0, 0, 0, 0.8);
 }
 
 .skills-container h2 {
@@ -227,6 +232,84 @@ header nav > a span:nth-child(2) {
   border: 2px solid;
   padding: 0.5rem;
   margin: 1rem auto;
+}
+
+/* PROJECT SECTION */
+
+.project {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+  gap: 1rem;
+  margin: 1rem auto;
+  
+}
+
+.project h2 {
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+.project-samples {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  margin: auto;
+  gap: 1rem;
+  width: 80%;
+  
+}
+
+.project-samples div {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.8 ease-out;
+}
+
+.project-samples div span {
+  font-weight: bold;
+}
+
+.project-image-1 {
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../images/html\ logo\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-image-2 {
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../images/css\ logo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-image-3 {
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../images/html\ logo\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-samples div a {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  color: white;
+  
+}
+
+.project-samples div a:hover {
+  transform: scaleX(1.1);
 }
 
 @media (min-width: 768px) {
@@ -292,20 +375,24 @@ header nav > a span:nth-child(2) {
   }
 
   /* SKILLS */
+  .skills {
+    height: 60vh;
+  }
 
   .skills-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 5rem 1fr;
   }
 
   .skills-container div {
-    transition: scale 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
   }
 
   .skills-container div:not(:first-child):hover {
-    scale: 1.5;
+    transform: scale(1.2);
     border: 1px solid white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
   }
 
   .skills-container div:nth-child(1) {
@@ -314,7 +401,33 @@ header nav > a span:nth-child(2) {
   }
 
   .skills-container div:not(:first-child) {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 2rem;
+    border-radius: 10px;
+  }
+
+  /* PROJECT SECTION */
+
+  .project-samples {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 70%;
+  }
+
+  .project-samples div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project-samples div:nth-child(1),
+  .project-samples div:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .project-samples div:nth-child(3) {
+    grid-column: 2 / 4;
   }
 }
