@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dindu's Portifolio</title>
+    <!-- FONT AWESOME CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- DEVICON -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
   </head>
   <body>
     <!-- CREATED BY CHIMDINDU CHIEMERIE UDE -->
@@ -34,7 +43,7 @@
             <i class="fa-solid fa-bars"></i>
           </button>
           <!-- mobile dropdown -->
-          <ul>
+          <ul class="mobile-nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -61,17 +70,11 @@
           <div>
             <h2>About Me</h2>
             <p>
-              <!-- I'm a reserved person curious to know more about whatever I'm
-              doing and be better at it and also possess a good sense of humor. -->
               I'm an aspiring fullstack developer passionate about building
               clean, intuitive and responsive digital experiences.
             </p>
             <h3>Background:</h3>
-            <p>
-              I'm a Nigerian, from Amokwe in Udi L.G.A Enugu State, I currently
-              reside at Plot A121 Hon. I.K Agbo Street Premier Layout Ogui-Nike
-              Enugu, Enugu State.
-            </p>
+            <p>I'm a Nigerian, from Amokwe in Udi L.G.A Enugu State.</p>
             <h3>Interests:</h3>
             <p>
               Playing team sports, Video gaming, playing chess and puzzles,
@@ -89,32 +92,41 @@
         </div>
       </section>
 
-      <section id="skills" class="skills">
-        <div class="skills-container">
+      <section id="skills" class="skill-container">
+        <h2>TECHNOLOGIES I'VE LEARNED</h2>
+        <div class="skill-names">
           <div>
-            <h2>Technologies I've Learned</h2>
+            <p><i class="fa-brands fa-html5"></i>HTML</p>
           </div>
+
           <div>
-            <p>HTML</p>
-            <span><i class="fa-brands fa-html5"></i></span>
+            <p><i class="fa-brands fa-css3"></i>CSS</p>
           </div>
+
           <div>
-            <p>CSS</p>
-            <span><i class="fa-brands fa-css3"></i></span>
+            <p><i class="devicon-git-plain"></i>GIT</p>
           </div>
+
           <div>
-            <p>GIT</p>
-            <span><i class="fa-brands fa-git"></i></span>
+            <p><i class="devicon-tailwindcss-original"></i>TAILWIND</p>
           </div>
+
           <div>
-            <p>TAILWIND</p>
-            <span><i class="fa-brands fa-tailwind-css"></i></span>
+            <p><i class="devicon-vscode-plain"></i>VS-CODE</p>
+          </div>
+
+          <div>
+            <p>CHROME DEV-TOOLS</p>
+          </div>
+
+          <div>
+            <p><i class="devicon-github-original"></i>GITHUB</p>
           </div>
         </div>
       </section>
 
       <section id="project" class="project">
-        <h2>My Projects</h2>
+        <h2>MY PROJECTS</h2>
         <div class="project-samples">
           <div>
             <div class="project-image-1"></div>
@@ -148,59 +160,91 @@
 
       <section id="contact" class="contact">
         <div class="contact-intro">
-          <h2>Contact Me</h2>
+          <h2>Get In Touch</h2>
           <p>
             Ready to level up your online presence? I build high-performing,
             custom websites tailored to your needs. Let us collaborate today!
           </p>
         </div>
 
-        <form>
-          <div class="first-last">
-            <div>
-              <label for="first_name">First Name</label>
-              <input
-                type="text"
-                id="first_name"
-                placeholder="Enter your first name"
-              />
+        <div class="contact-details">
+          <form>
+            <div class="first-last">
+              <div>
+                <label for="first_name">First Name</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  placeholder="Enter your first name"
+                />
+              </div>
+
+              <div>
+                <label for="last_name">Last Name</label>
+                <input
+                  type="text"
+                  id="last_name"
+                  placeholder="Enter your last name"
+                />
+              </div>
             </div>
 
-            <div>
-              <label for="last_name">Last Name</label>
-              <input
-                type="text"
-                id="last_name"
-                placeholder="Enter your last name"
-              />
+            <div class="email-course">
+              <div>
+                <label for="email-course">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="example@gmail.com"
+                />
+              </div>
+
+              <div class="comment">
+                <label for="comment">Comment</label>
+                <textarea
+                  id="comment"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <div class="contact-links">
+            <h3>Contact With Me</h3>
+            <p>Call line: 08168531564</p>
+            <p>Gmail: chimdiudechukwu@gmail.com</p>
+            <div class="contact-urls">
+              <a href="https://github.com/Dinduude/"
+                ><i class="devicon-github-original"></i>GitHub</a
+              >
+
+              <a href="https://www.linkedin.com/in/chimdindu-ude-483688237/"
+                ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+              >
+
+              <a href="https://x.com/Dii__ndu">
+                <i class="devicon-twitter-original"></i>
+                X-Twitter</a
+              >
             </div>
           </div>
-
-          <div class="email-course">
-            <div>
-              <label for="email-course">Email</label>
-              <input type="email" id="email" placeholder="example@gmail.com" />
-            </div>
-
-            <div class="comment">
-              <label for="comment">Comment</label>
-              <textarea
-                id="comment"
-                placeholder="Enter your message"
-              ></textarea>
-            </div>
-          </div>
-
-          <button type="submit">Submit</button>
-        </form>
+        </div>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Dindu</p>
-      <a href="https://github.com/Dinduude/"><i class="fa-brands fa-git"></i></a>
-      <a href="https://www.linkedin.com/in/chimdindu-ude-483688237/"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://x.com/Dii__ndu"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://github.com/Dinduude/"
+        ><i class="devicon-github-original"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/chimdindu-ude-483688237/"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a href="https://x.com/Dii__ndu">
+        <i class="devicon-twitter-original"></i>
+      </a>
     </footer>
   </body>
 </html>
